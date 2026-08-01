@@ -1,7 +1,7 @@
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker
-			.register('/sw.js')
+			.register('sw.js') // убрали слеш
 			.then((registration) => {
 				console.log('SW зарегистрирован с областью:', registration.scope)
 				checkSubscription(registration)
