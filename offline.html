@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Нет соединения</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			body {
+				text-align: center;
+				padding: 50px;
+				font-family: Arial, sans-serif;
+			}
+			.offline-icon {
+				font-size: 64px;
+			}
+			h1 {
+				color: #0b3d5f;
+			}
+			.btn {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="offline-icon">📡</div>
+		<h1>Вы офлайн</h1>
+		<p>
+			Пожалуйста, проверьте подключение к интернету, чтобы получить свежие
+			новости.
+		</p>
+		<p>Но вы всё ещё можете просматривать уже загруженные страницы.</p>
+		<button class="btn" onclick="location.reload()">Попробовать снова</button>
+	</body>
+</html>

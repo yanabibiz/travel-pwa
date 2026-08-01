@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Контакты</title>
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="icon" href="/icons/icon-192.png" />
+		<meta name="theme-color" content="#0b3d5f" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>🌍 <span>Travel</span>Blog</h1>
+				<nav>
+					<a href="index.html">Главная</a>
+					<a href="destinations.html">Направления</a>
+					<a href="tips.html">Советы</a>
+					<a href="contacts.html">Контакты</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container">
+			<h2 class="section-title">Свяжитесь с нами</h2>
+
+			<div class="form-box">
+				<form>
+					<label>Ваше имя *</label>
+					<input type="text" name="name" required />
+
+					<label>Ваш Email *</label>
+					<input type="email" name="email" required />
+
+					<label>Страна мечты</label>
+					<input type="text" name="country" placeholder="Например: Исландия" />
+
+					<label>Ваше сообщение</label>
+					<textarea name="message" rows="4"></textarea>
+
+					<button
+						type="submit"
+						onclick="
+							alert('Спасибо! Форма демонстрационная (без сохранения в БД).')
+						"
+					>
+						✉️ Отправить
+					</button>
+				</form>
+				<p style="text-align: center; color: #888; margin-top: 20px">
+					* Форма демонстрационная, данные не сохраняются
+				</p>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>© 2026 TravelBlog. Ждем ваши истории!</p>
+			</div>
+		</footer>
+
+		<script src="app.js"></script>
+	</body>
+</html>
