@@ -1,6 +1,3 @@
-// app.js
-
-// РЕГИСТРАЦИЯ SERVICE WORKER
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker
@@ -13,7 +10,6 @@ if ('serviceWorker' in navigator) {
 	})
 }
 
-// VAPID КЛЮЧ (замените на свой)
 const VAPID_PUBLIC_KEY =
 	'BLlYtP2LtKFhJMHiENP_sUjJkiDWyHeJFG_sBrCh9CuXDkLyDHHaXB2_vV-dO85sa7c-ZpoTetS0fFEqBcfAZYM'
 

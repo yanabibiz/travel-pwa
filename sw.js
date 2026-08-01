@@ -1,5 +1,3 @@
-// sw.js
-
 const CACHE_NAME = 'travel-blog-v1'
 const OFFLINE_URL = '/offline.html'
 
@@ -15,9 +13,12 @@ const PRECACHE_URLS = [
 	'/offline.html',
 	'/icons/icon-192.png',
 	'/icons/icon-512.png',
+	'/images/italy.jpg',
+	'/images/japan.jpg',
+	'/images/iceland.jpg',
+	'/images/thailand.jpg',
 ]
 
-// УСТАНОВКА
 self.addEventListener('install', (event) => {
 	event.waitUntil(
 		caches
@@ -27,7 +28,6 @@ self.addEventListener('install', (event) => {
 	)
 })
 
-// АКТИВАЦИЯ
 self.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches
@@ -43,7 +43,6 @@ self.addEventListener('activate', (event) => {
 	)
 })
 
-// ПЕРЕХВАТ ЗАПРОСОВ
 self.addEventListener('fetch', (event) => {
 	const request = event.request
 	const url = new URL(request.url)
@@ -78,7 +77,6 @@ self.addEventListener('fetch', (event) => {
 	}
 })
 
-// PUSH-УВЕДОМЛЕНИЯ
 self.addEventListener('push', (event) => {
 	const data = event.data?.json() || {}
 	const title = data.title || 'Новое уведомление'
@@ -91,7 +89,6 @@ self.addEventListener('push', (event) => {
 	event.waitUntil(self.registration.showNotification(title, options))
 })
 
-// КЛИК ПО УВЕДОМЛЕНИЮ
 self.addEventListener('notificationclick', (event) => {
 	event.notification.close()
 	const url = event.notification.data?.url || '/'
