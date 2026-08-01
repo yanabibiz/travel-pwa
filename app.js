@@ -13,6 +13,7 @@ if ('serviceWorker' in navigator) {
 const VAPID_PUBLIC_KEY =
 	'BLlYtP2LtKFhJMHiENP_sUjJkiDWyHeJFG_sBrCh9CuXDkLyDHHaXB2_vV-dO85sa7c-ZpoTetS0fFEqBcfAZYM'
 
+	
 async function checkSubscription(registration) {
 	const subscription = await registration.pushManager.getSubscription()
 	if (subscription) {
