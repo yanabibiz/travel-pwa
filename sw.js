@@ -16,7 +16,7 @@ const PRECACHE_URLS = [
 	'/travel-pwa/images/italy.jpg',
 	'/travel-pwa/images/japan.jpg',
 	'/travel-pwa/images/iceland.jpg',
-
+	'/travel-pwa/icons/apple-touch-icon.png',
 ]
 
 self.addEventListener('install', (event) => {
